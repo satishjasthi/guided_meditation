@@ -2,5 +2,4 @@ __pycache__/
 .venv/
 *.mp3
 *.wav
-!voices/*.wav
 .env

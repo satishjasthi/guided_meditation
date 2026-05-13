@@ -1,12 +1,10 @@
 [project]
 name = "guided-meditation"
-version = "0.1.0"
-description = "Generate guided meditation audio for a given number of minutes using StyleTTS2"
+version = "0.2.0"
+description = "Generate guided meditation audio for a given number of minutes using Kokoro TTS"
 requires-python = ">=3.10"
 dependencies = [
-    "styletts2==0.1.6",
+    "kokoro>=0.9.2",
     "soundfile==0.12.1",
     "numpy>=1.24",
-    "torch==2.5.1",
-    "torchaudio==2.5.1",
 ]
