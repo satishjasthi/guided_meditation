@@ -52,3 +52,21 @@ Use `--pace slow` (0.65x, longer pauses) or `--pace medium` (0.75x, shorter paus
 ## Available Voices
 
 All 54 [Kokoro voices](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) bundled locally. Shortcuts: `female` → `af_bella`, `male` → `am_fenrir`.
+
+## Docker (Multi-platform)
+
+Pre-built image supports `linux/amd64` and `linux/arm64`. No local setup needed.
+
+```bash
+# Pull and run (output lands on host)
+docker run --rm -v $(pwd)/output:/app/output satishjasthi/guided-meditation:latest \
+  --minutes 20 --voice female --pace slow --output output/meditation.wav
+
+# Or use make
+make docker-run MINUTES=20 VOICE=male
+```
+
+Build and push yourself:
+```bash
+make docker-build
+```
